@@ -35,11 +35,11 @@ const Page = () => {
 	}, [fetchProducts]);
     /*******************************************************/
     if (isLoading) {
-		return <div>Loading...</div>;
+		return <div className="content">Loading...</div>;
 	}
 
     if (error) {
-		return <div>{error}</div>;
+		return <div className="content">{error}</div>;
 	}
 
     return(
