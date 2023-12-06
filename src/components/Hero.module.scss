@@ -1,0 +1,70 @@
+@import './global.scss';
+
+.heropicture {
+    background: linear-gradient(82.02deg, rgba(253, 192, 183, 0.8) 0.98%, rgba(210, 204, 255, 0.8) 50.91%, rgba(107, 180, 253, 0.8) 100%);
+    .copy {
+        margin-top: 200px;
+        padding: 0;
+        p {
+            margin-top: 45px;
+            line-height: 24px;
+        }
+        a {
+            margin-top: 16px;
+            display: inline-block;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+            font-weight: $medium-weight;
+        }
+        @media screen and (max-width: 1200px) {
+            margin-top: 0px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-start;
+            align-content: center;
+            p {
+                margin-top: 16px;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            h1 {
+                text-align: center;
+            }
+            .button {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    .heroimg {
+        padding: 0;
+        margin-top: 120px;
+        @media screen and (max-width: 1200px) {
+            margin-top: 30px;
+            max-width: 60%;
+            img {
+                max-width: 100%;
+            }
+        }
+        @media screen and (max-width: 992px) {
+            margin-top: 0px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-start;
+            align-content: center;
+        }
+        @media screen and (max-width: 767px) {
+            margin-top: 60px;
+            max-width: 100%;
+        }
+    }
+    @media screen and (max-width: 992px) {
+        padding: 32px 0px;
+    }
+    @media screen and (max-width: 767px) {
+        padding: 60px 20px;
+    }
+}

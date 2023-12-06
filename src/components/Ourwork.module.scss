@@ -1,0 +1,106 @@
+@import './global.scss';
+
+.ourwork {
+    margin-top: 100px;
+    padding-bottom: 65px;
+    position: relative;
+    .item {
+        margin-top: 32px;
+    }
+    .item:first-child {
+        margin-top: 16px;
+    }
+    .copy {
+        a {
+            display: inline-block;
+            margin-top: 16px;
+        }
+    }
+    h2 {
+        padding-bottom: 20px;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            width: 70%;
+            max-width: 330px;
+            border: 1px solid $light-blue;
+        }
+    }
+    p {
+        margin-top: 32px;
+    }
+    .copyblock {
+        display: flex;
+        align-items: center;
+    }
+    .item:nth-child(even) {
+        .copyblock {
+            padding-right: 120px;
+        }
+        .copy {
+            text-align: right;
+        }
+        h2:after {
+            right: 0px;
+        }
+    }
+    .item:nth-child(odd) {
+        flex-direction: row-reverse;
+        .copyblock {
+            padding-left: 120px;
+        }
+        .copy {
+            text-align: left;
+        }
+        h2:after {
+            left: 0px;
+        }
+    }
+    .copyblock,
+    .imageblock {
+        padding: 0px;
+        img {
+            max-width: 100%;
+        }
+    }
+    &:after {
+        position: absolute;
+        content: '';
+        bottom: 0px;
+        width: 50%;
+        max-width: 330px;
+        height: 2px;
+        background-color: $light-blue;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .ourwork {
+        .copyblock {
+            padding: 16px 0px 0px 0px;
+        }
+        .item:nth-child(even) {
+            .copyblock {
+                padding-right: 0px
+            }
+            .copy {
+                text-align: left;
+            }
+            h2:after {
+                left: 0px;
+            }
+            flex-direction: column-reverse;
+        }
+        .item:nth-child(odd) {
+            .copyblock {
+                padding-left: 0px
+            }
+            flex-direction: column-reverse;
+        }
+    }
+}

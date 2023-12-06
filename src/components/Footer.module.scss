@@ -1,0 +1,82 @@
+@import './global.scss';
+
+.footer {
+    background-color: $primary-white;
+    padding: 80px 0px;
+    .title {
+        padding: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            max-width: 230px;
+        }
+        a {
+            float: right;
+            // display: inline-block;
+            background-color: $primary-grey;
+            @media screen and (max-width: 767px) {
+                float: left;
+                margin-top: 32px;
+            }
+        }
+    }
+    .footerinfo {
+        margin-top: 40px;
+        .footermenu {
+            display: flex;
+            flex-direction: column;
+            // padding: 0px;
+            a {
+                font-size: 24px;
+                text-decoration: none;
+                text-transform: none;
+                color: $primary-grey;
+                margin: 12px 0px;
+                font-weight: $medium-weight;
+            }
+            @media screen and (max-width: 767px) {
+                padding-bottom: 16px;
+                border-bottom: 2px solid $light-grey;
+            }
+        }
+        .intro p {
+            color: $primary-grey;
+            margin-top: 32px;
+            font-size: 16px;
+            font-weight: $normal-weight;
+        }
+        .social {
+            max-width: 280px;
+            // padding: 0px;
+            border-bottom: 0px;
+            h4 {
+                width: 100%;
+                font-weight: $medium-weight;
+                color: $primary-grey;
+                margin-top: 16px;
+            }
+            a {
+                display: inline-block;
+                margin: 16px 20px 5px 0px;
+            }
+            .follow {
+                @media screen and (max-width: 767px) {
+                    padding-top: 16px;
+                    padding-bottom: 32px;
+                    border-bottom: 2px solid $light-grey;
+                }
+            }
+            p {
+                margin-top: 32px;
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: $medium-weight;
+                color: $primary-grey;
+            }
+            @media screen and (max-width: 767px) {
+                max-width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+@import './global.scss';
+
+.header {
+    padding: 32px 0px 20px 0px;
+    position: relative;
+    overflow: visible;
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        max-width: 230px;
+    }
+    .logo {
+        img {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        padding: 16px 0px;
+    }
+}
+.mainmenu {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    a {
+        font-size: 20px;
+        font-weight: $medium-weight;
+        color: #000000;
+        padding: 0px 29px;
+    }
+    .getintouch {
+        background-color: $primary-grey;
+    }
+    @media screen and (max-width: 1200px) {
+        display: none;
+    }
+}
+.small {
+    display: none;
+    .menuopen,
+    .menuclose {
+        height: 32px;
+        width: 37px;
+        cursor: pointer;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            height: auto;
+            width: auto;
+        }        
+    }
+    @media screen and (max-width: 1200px) {
+        display: block;
+    }
+}
+
+.mobilemenu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    width: 100%;
+    background-color: $primary-white;
+    text-align: center;
+    border-top: 2px solid $light-grey;
+    padding-bottom: 32px;
+    a {
+        color: #000000;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: $bold-weight;
+        display: inline-block;
+        padding: 25px;
+        border-bottom: 2px solid $light-grey;
+        &:not(.button) {
+            width: 80%;
+            min-width: 240px;
+        }
+        &:nth-last-child(2) {
+            border: none
+        }
+    }
+    .getintouch {
+        border: none;
+        background-color: $primary-grey;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .content.mobilemenu {
+        display: none;
+    }
+}

@@ -1,0 +1,50 @@
+@import './global.scss';
+
+.getstarted {
+    margin-top: 120px;
+    background-image: url(../Img/chromeye_assignment_desktopbgbanner_v1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .content {
+        padding-top: 120px;
+        padding-bottom: 120px;
+        @media screen and (max-width: 1080px) {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+    .sectionheading {
+        max-width: 880px;
+        align-items: center;
+        h1 {
+            color: $primary-blue;
+        }
+        p {
+            color: $primary-blue;
+            margin-top: 16px;
+        }
+        border: none;
+        padding: 32px 150px;
+        background: rgba(255, 255, 255, 0.85);
+        @media screen and (max-width: 1080px) {
+            max-width: 760px;
+        }
+        @media screen and (max-width: 992px) {
+            max-width:560px;
+            padding: 32px 64px;
+        }
+        @media screen and (max-width: 680px) {
+            max-width:500px;
+            padding: 32px 32px;
+        }
+    }
+    .button {
+        margin-top: 16px;
+        display: inline-block;
+        background-color: $primary-grey;
+    }
+    @media screen and (max-width: 992px) {
+        margin-top: 64px;
+    }
+}

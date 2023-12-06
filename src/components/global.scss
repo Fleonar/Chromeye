@@ -1,0 +1,83 @@
+$font-stack: 'Poppins', sans-serif;
+// Weights
+$normal-weight:   400;
+$medium-weight:   500;
+$semibold-weight: 600;
+$bold-weight:     700;
+// Colors
+$primary-white: #fff;
+$primary-black: #000;
+$primary-blue: #1C73A8;
+$primary-green: #0AE2C1;
+$primary-grey: #646464;
+$light-blue: #00BAFF;
+$light-grey: #EDEDED;
+
+$global-border-radius: 4px;
+
+.content {
+    max-width: 1280px;
+    margin: 0px auto;
+    padding: 0px;
+    box-sizing: border-box;
+    font: 100% $font-stack;
+    h1 {
+        font-size: 44px;
+        line-height: 48px;
+        font-weight: $bold-weight;
+    }
+    h2 {
+        font-size: 38px;
+        line-height: 42px;
+        font-weight: $bold-weight;
+    }   
+    h3 {
+        font-size: 28px;
+        line-height: 32px;
+        font-weight: $bold-weight;
+    }
+    h4 {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: $bold-weight;
+    }
+    p {
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: $normal-weight;
+    }
+    .button {
+        font-size: 18px;
+        font-weight: $normal-weight;
+        padding: 22px 32px;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: $global-border-radius;
+        box-shadow: 2px 2px 4px 0px #00000033;
+        transition: all 0.3s;
+        background-color: $light-blue;
+        color: $primary-white;
+    }
+    .button:hover {
+        background-color: $primary-blue;
+    }
+    .sectionheading {
+        max-width: 670px;
+        margin: 0px auto 0px auto;
+        text-align: center;
+        h1 {
+            margin-bottom: 0px;
+        }
+        p {
+            margin: 45px 0px 16px 0px;
+        }
+    }
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    @media screen and (max-width: 575px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

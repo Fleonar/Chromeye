@@ -1,0 +1,88 @@
+@import './global.scss';
+
+.agencyservices {
+    margin-top: 65px;
+    .collapsible {
+        display: none;
+        // margin-top: 32px;
+        padding: 16px 0px;
+    }
+    .active .collapsible {
+        display: block;
+    }
+    .tabimage {
+        display: none;
+    }
+    .active.tabimage {
+        display: block;
+    }
+    .tabssection {
+        margin: 50px auto 0px auto;
+        max-width: 1140px;
+        .tabs {
+            padding: 0;
+            max-width: 500px;
+            .tabitem {
+                font-size: 18px;
+                border-radius: $global-border-radius;
+                padding: 16px 32px;
+                box-sizing: border-box;
+                font-weight: $medium-weight;
+                border-top: 2px solid $light-grey;
+                &:last-child {
+                    border-bottom: 2px solid $light-grey;
+                }
+                span {
+                    cursor: pointer;
+                    display: block;
+                    padding: 16px 0px;
+                    width: 100%;
+                    background-image: url(../Icons/chromeye_assignment_arrowdown_v1.svg);
+                    background-repeat: no-repeat;
+                    background-position: 100% center;
+                    background-size: auto 50%;
+                }
+            }
+            .active {
+                border: none;
+                background-color: $light-grey;
+                span {
+                    color: $primary-blue;
+                    background-image: url(../Icons/chromeye_assignment_arrowup_v1.svg);
+                }
+            }
+            .active + .tabitem {
+                border-top: none;
+            }
+            @media screen and (max-width: 1200px) {
+                padding-right: 32px;
+                max-width: 60%;
+            }
+            @media screen and (max-width: 767px) {
+                padding-right: 0px;
+                max-width: 100%;
+                margin-top: 32px;
+            }
+        }
+        .images {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding: 0;
+            img {
+                max-width: 100%;
+            }
+            @media screen and (max-width: 1200px) {
+                align-items: center;
+                max-width: 40%;
+            }
+            @media screen and (max-width: 767px) {
+                max-width: 100%;
+                justify-content: center;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            flex-direction: column-reverse;
+        }
+    }
+}

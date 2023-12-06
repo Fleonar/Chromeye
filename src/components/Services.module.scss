@@ -1,0 +1,62 @@
+@import './global.scss';
+
+.services {
+    margin-top: 100px;
+    text-align: center;
+    .servicelist {
+        margin-top: 50px;
+        .item {
+            img {
+                max-width: 65px;
+            }
+            h4 {
+                margin: 32px 0px 0px 0px;
+                @media screen and (max-width: 1200px) {
+                    min-height: 56px;
+                    display: flex;
+                    align-content: center;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
+            p {
+                margin-top: 25px;
+            }
+            label {
+                margin-top: 20px;
+                span {
+                display: block;
+                height: 26px;
+                width: 26px;
+                cursor: pointer;
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                        width: auto;
+                        height: auto;
+                    }
+                }
+            }
+            input,
+            span+span {
+                display: none;
+            }
+            .collapsible {
+                visibility: hidden;
+            }
+            input:checked ~ label span {
+                display: none;
+            }
+            input:checked ~ label span+span{
+                display: block;
+            }
+            input:checked ~ .collapsible {
+                visibility: visible;
+            }
+        }
+    }
+    .getintouch {
+        margin-top: 65px;
+        display: inline-block;
+    }
+}
