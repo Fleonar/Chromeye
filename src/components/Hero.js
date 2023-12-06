@@ -12,7 +12,7 @@ const Hero = ({ props }) => {
                         <a className={classes.button} href={props.buttonUrl} alt="">{props.buttonLabel}</a>
                     </div>
                     <div className={`col-md ${classes.heroimg}`}>
-                        <img src={props.image}/>
+                        <img src={props.image} alt={props.title}/>
                     </div>
                 </div>
             </div>

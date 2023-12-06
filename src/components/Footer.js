@@ -1,5 +1,4 @@
 import classes from './Footer.module.scss';
-import logo from '..'
 import facebook from '../Icons/chromeye_assignment_facebookicon_v1.svg';
 import twitter from '../Icons/chromeye_assignment_twittericon_v1.svg';
 import linkedin from '../Icons/chromeye_assignment_linkedinicon_v1.svg'
@@ -39,9 +38,9 @@ const Footer = ({company_data, menu, button}) => {
                             <div className={`col-md ${classes.follow}`}>
                                 <h4>Follow us:</h4>
                                 {Object.entries(company_data.social_media).map(([key, val], index) => (
-                                    key === 'facebook' ? <a key={index} href={val}><img src={facebook}/></a> :
-                                    key === 'linkedin' ? <a key={index} href={val}><img src={linkedin}/></a> : 
-                                    key === 'twitter' ? <a key={index} href={val}><img src={twitter}/></a> : null
+                                    key === 'facebook' ? <a key={index} href={val}><img src={facebook} alt="facebook"/></a> :
+                                    key === 'linkedin' ? <a key={index} href={val}><img src={linkedin} alt="linkedin"/></a> : 
+                                    key === 'twitter' ? <a key={index} href={val}><img src={twitter} alt="twitter"/></a> : null
                                 ))}
                             </div>
                         </div>

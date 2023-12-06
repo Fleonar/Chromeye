@@ -21,7 +21,7 @@ const Header = (props) => {
                     item.url && <a key={index} href={item.url}><span>{item.name}</span></a>
                 ))}</div>
                 <div className={classes.small}>
-                    {menuOpen ? <div className={classes.menuclose} onClick={menuToggleHandler}><img src={menuclose}/></div> : <div className={classes.menuopen} onClick={menuToggleHandler}><img src={menuopen}/></div>}
+                    {menuOpen ? <div className={classes.menuclose} onClick={menuToggleHandler}><img src={menuclose} alt="menu close"/></div> : <div className={classes.menuopen} onClick={menuToggleHandler}><img src={menuopen} alt="menu open"/></div>}
                 </div>
             </div>
             {menuOpen && <div className={`${classes.content} ${classes.mobilemenu}`}>
